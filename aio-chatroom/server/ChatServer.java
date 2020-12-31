@@ -54,7 +54,7 @@ public class ChatServer {
             channelGroup = AsynchronousChannelGroup.withThreadPool(executorService);
             serverChannel = AsynchronousServerSocketChannel.open(channelGroup);
             serverChannel.bind(new InetSocketAddress(LOCALHOST, port));
-            System.out.println("启动服务器，监听端口：" + port);
+            System.out.println("启动服务器，监听端口 ：" + port);
 
             while (true) {
                 serverChannel.accept(null, new AcceptHandler());
